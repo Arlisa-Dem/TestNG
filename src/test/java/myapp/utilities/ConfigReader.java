@@ -13,6 +13,7 @@ public class ConfigReader {
     static  {
         String path = "configuration.properties";
         try {
+
             FileInputStream fileInputStream = new FileInputStream(path);
             properties = new Properties();
             properties.load(fileInputStream);
@@ -21,6 +22,9 @@ public class ConfigReader {
         }
     }
     //Create method that accepts Key and returns Value
+    //This method will get the key from properties file,
+    //And return the value as String
+    //We create this method to read the file
 
     public static String getProperty(String key){
         String value =  properties.getProperty(key);
