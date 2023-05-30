@@ -1,0 +1,66 @@
+1---Test Case ID: US_01
+2---Test Case Description: "Customer should sign up as a user on the website (Register)".
+3---Test Steps:
+User should enter username.
+User should enter email address.
+User should enter password.
+Sign-up should not be completed without clicking "I agree to the privacy policy"
+Click on the SIGN UP button to register.
+4---Expected Result: "I should not see the error message
+5---Status: Passed
+
+
+Feature: customer_signup
+Scenario:US_01 Customer should sign up as a user on the website (Register)
+Given:Go to url: https://pearlymarket.com
+Then:User should enter username
+Then:User should enter email address.
+Then:User should enter password.
+Then:Sign-up should not be completed without clicking "I agree to the privacy policy"
+And:Click on the SIGN UP button to register.
+And close browser
+
+----------------------------------------------------------------------------------------
+
+
+1---Test Case ID: US_02
+2---Test Case Description: Registration should NOT be available using previously registered credentials.  (Register)
+3---Test Steps:
+User should enter a registered username.
+User should enter a registered email address.
+User should enter a password.
+Click on the SIGN UP button to register.
+"An account is already registered with your email address." should be visible.
+4---Expected Result: I should see: An account is already registered with your email address.
+5---Status: Failed
+
+
+
+Scenario:US_02
+Given:Go to url: https://pearlymarket.com
+Then:User should enter a registered username.
+Then:User should enter a registered email address.
+Then:User should enter a password.
+Then:Click on the SIGN UP button to register.
+Then:"An account is already registered with your email address." should be visible.
+And close browser
+
+-----------------------------------------------------------------------------------
+
+1---Test Case ID: US_03
+2---Test Case Description: "User should add Billing Address. (My Account > Adressses > Billing Address)"
+3---Test Steps:
+User should enter First name, Last name, Country/Region, Street address, Town / City, State, ZIP Code and Phone Number.
+The registered email address should be filled in automatically.
+After clicking 'Save Address', the Billing Address should be added.
+4---Expected Result: I should see: Address changed successfully.(The following addresses will be used on the checkout page by default.)
+5---Status: Passed
+
+
+
+Scenario:US_03
+Given:Go to url: https://pearlymarket.com
+Then:User should enter First name, Last name, Country/Region, Street address, Town / City, State, ZIP Code and Phone Number.
+Then:The registered email address should be filled in automatically.
+Then:After clicking 'Save Address', the Billing Address should be added.
+And close browser
