@@ -195,6 +195,18 @@ public class ReusableMethods {
             e.printStackTrace();
         }
     }
+    //This method will verify expected and actual texts if they match
+    public static void verifyExpectedAndActualTextsMatch(String expectedText,WebElement actualElement){
+
+        //We can also handle synchronisation issue in this method by using reusable methods.
+        try {
+        WaitUtils.waitForVisibility(actualElement,10);
+        assertEquals(expectedText,actualElement.getText());
+    }catch (NoSuchElementException e){
+            e.printStackTrace();
+        }
+    }
+
     //    ALERT
     public void acceptAlert() throws InterruptedException {
         Driver.getDriver().switchTo().alert().accept();

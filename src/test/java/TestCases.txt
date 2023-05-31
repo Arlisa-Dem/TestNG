@@ -64,3 +64,16 @@ Then:User should enter First name, Last name, Country/Region, Street address, To
 Then:The registered email address should be filled in automatically.
 Then:After clicking 'Save Address', the Billing Address should be added.
 And close browser
+
+
+Go to admin.atlassian.com. Select your organization if you have more than one.
+
+Select Settings.
+
+Back up any data that you want to keep.
+
+If you have domains associated with your organization, remove them.
+
+If you have products included in your active subscriptions, remove them.
+
+Select Delete organization.
