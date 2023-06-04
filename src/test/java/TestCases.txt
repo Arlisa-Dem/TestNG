@@ -77,3 +77,5 @@ If you have domains associated with your organization, remove them.
 If you have products included in your active subscriptions, remove them.
 
 Select Delete organization.
+
+my token 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

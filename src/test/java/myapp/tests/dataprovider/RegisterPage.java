@@ -1,5 +1,7 @@
-package myapp.my_little_project;
+package myapp.tests.dataprovider;
 
+import myapp.my_little_project.PearlyMarketMyAccount;
+import myapp.my_little_project.PearlyMarketRegisterPage;
 import myapp.utilities.ConfigReader;
 import myapp.utilities.Driver;
 import org.testng.Assert;
