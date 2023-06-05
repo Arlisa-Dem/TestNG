@@ -1,0 +1,73 @@
+Agile vs Waterfall
+Waterfall does not welcome new changes and updates
+Agile is customer oriented and welcomes new changes and updates
+Which environmnet would you prefer Waterfall or Agile?
+I'm working in Agile env I'm already familiar with waterfall.
+in Agile:
+Scrum Team: (Self oraganized)
+Scrum Master => oraganize scrum ceremonies, facilitator for the team.
+Product Owner => they are representatives of the business, they might be stakeholders.
+Developer
+Testesr
+Who will decide how many items they can deliver? dev team
+PO will need the help of dev team
+who will decide which item will be delivered? PO
+we will analyse items and get sujestions from developers -> grooming
+After gromming we will have sprint planning meeting.
+In sprint planning meeting -> share responsibilities, point the US.
+next we will have Daily stand-up everyday.
+Demo
+Sprint review / Retropective
+What is the difference between Team Capacity and Team Velocity?
+Sprint of 2 weeks:
+5 people: 50 point
+velocity = 45
+team capacity => is the whole capacity of team members.
+velocity => is the actual/current workers capacity.
+What is JVM, JRE, JDK?
+JDK - Java Development Kit/tool (javac, jconsole, jheap, etc..)
+JRE - Java Class Library (Scanner, Map, Array, etc...)
+JVM - when everything is ready they run in an abstract machine.
+What is the field in Java?
+Instance / variable
+we can use to store the data and to reach all properties of a class from instances
+What is a class in java?
+it is a template or blueprint, we use classes to create constructors, methods, variables, static and simple blocks.
+What is a constructor?
+we use it to initialize class properties
+we can also initialize super parent properties
+we can only use class name for constructors
+no return type for constructors
+mehods also used to initialize or to make data manipulations
+methods have return types and non-return(void) types
+we can give any name
+we can do overloading and overriding with methods
+overloading => when we have same name and different signature for methods in the same class.
+overriding => we have 2 same methods with the same name and signature but one is supper type and the other one is in sub type.
+we can use some access modifiers for class instances:
+public => open to all
+default => inside same packages
+protected => inside same packages and sub classes of other packages
+private => only inside same class
+final classes can not have child class
+final variables shoulf be initialzied and can not be changed
+final method can not be overridden
+finally: we use it after try-catch block to have it run if execution passes or fails.
+static: it belongs to class, it shares the same value everwhere, we can call them just with the class name or using an object.
+static block: it will be execute first on top of everything.
+Interface: it allows multiple inheritance, we can have full abstraction
+Abstract class: we can use abstract classes for semi-abstraction
+Interface:
+    No constructor
+    No Object creation
+    no concrete methods other than static and default methods
+    abstract methods
+    no protected, private, default variables
+    only public static final variables by default
+    we can implement multiple times.
+Abstract class:
+    Constructor
+    No Object creation
+    Abstract methods
+    Concrete methods
+    No multiple inheritance
