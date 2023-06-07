@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="my method suite" verbose="1" >
+
+<!--Class 1: Runs only 1 and test6 in the Day17_Annotations class-->
+    <test name="Regression1" preserve-order="false">
+        <classes>
+            <class name="myapp.tests.topics.Day17_Annotations">
+                <!-- We use include to run methods in a specific class -->
+                <methods>
+                    <include name="test1" />
+                    <include name="test6" />
+        </methods>
+    </class>
+
+    <class name="myapp.tests.dataprovider.Day22_DataProvider2">
+        <!-- We use exclude to run all methods in a specific class except the one we want not to run -->
+        <methods>
+            <exclude name="productTest"></exclude>
+        </methods>
+    </class>
+    </classes>
+    </test>
+    </suite>

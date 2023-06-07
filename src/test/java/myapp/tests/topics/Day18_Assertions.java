@@ -1,4 +1,4 @@
-package myapp.tests;
+package myapp.tests.topics;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -6,7 +6,7 @@ import org.testng.asserts.SoftAssert;
 
 public class Day18_Assertions {
 
-    @Test
+    @Test(groups = "regression1")
     public void hardAssertion() {
       /*
         Hard assertion will stop if the assertion fails
@@ -20,7 +20,7 @@ public class Day18_Assertions {
     }
 
 
-    @Test
+    @Test(groups = "regression1")
     public void softAssertions() {
 
      /*

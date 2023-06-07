@@ -3,8 +3,11 @@
     <test name="smoke test">
         <packages>
             <package name="myapp.tests.dataprovider"></package>
+            <package name="myapp.tests.smoketests.logintests.excelautomation"></package>
         </packages>
     </test>
 </suite>
         <!--verbose="1" the amount of information you see on the console
-        SAVE your xml files-->
+        SAVE your xml files : Control + S ||| COMMAND + S ||| FILE> SAVE ALL
+
+        NOTE: if you see no class found , double check you path and try to run other packages-->

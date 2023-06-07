@@ -1,0 +1,27 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="my login suite" verbose="1" >
+
+    <test name="Regression1">
+
+        <!-- This section looks for the tag of groups -->
+        <groups>
+            <run>
+                <include name="regression1" />
+            </run>
+        </groups>
+
+        <!--We can use here to add class or packages-->
+        <packages>
+            <!--This section looks for regression1 tag under myapp package -->
+            <package name="myapp.*"></package>
+
+        </packages>
+    </test>
+    <!--
+      Put  regression1 tag beside the @Test annotations as groups ==> @Test(groups = "regression1")
+      This xml file runs all the test methods that we included
+      If we use exclude here it will run all test methods except grouped ones(4 methods).
+       -->
+
+</suite>

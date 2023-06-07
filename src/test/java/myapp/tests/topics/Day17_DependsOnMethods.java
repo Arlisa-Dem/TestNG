@@ -1,4 +1,4 @@
-package myapp.tests;
+package myapp.tests.topics;
 
 import org.testng.annotations.Test;
 import static org.testng.AssertJUnit.assertTrue;

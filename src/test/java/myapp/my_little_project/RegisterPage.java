@@ -1,4 +1,4 @@
-package myapp.tests.dataprovider;
+package myapp.my_little_project;
 
 import myapp.my_little_project.PearlyMarketMyAccount;
 import myapp.my_little_project.PearlyMarketRegisterPage;

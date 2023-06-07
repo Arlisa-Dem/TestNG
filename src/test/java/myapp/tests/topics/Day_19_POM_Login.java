@@ -11,7 +11,7 @@ public class Day_19_POM_Login {
 
 
 
-    @Test
+    @Test(groups = "regression1")
     public void loginTest(){
 
     /*
