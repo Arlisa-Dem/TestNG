@@ -1,0 +1,12 @@
+--Listeners--
+-What is listeners?
+- Listeners are used to LISTEN the test cases when they pass, fail, skip, start, end ... Listener will customize the TestNG framework.
+-How do we use Listeners?
+-We use it on test NG project
+-We use it for customizing test ng project when they pass, fail, skip, start ... like taking screenshot, rerun failed test cases ...
+-We implement ITestListener interface and use onFailure() method to take screenshot on failed test cases.
+-   There are 2 ways to connect Listeners and Test Classes
+- 1st: @Listeners(com.myapp.utilities.ListenersUtil.class) annotation
+- 2nd: xml file
+
+-To use xml file to connect Listeners and Test Classes is best practice.
