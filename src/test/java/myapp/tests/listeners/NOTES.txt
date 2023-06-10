@@ -10,3 +10,130 @@
 - 2nd: xml file
 
 -To use xml file to connect Listeners and Test Classes is best practice.
+
+--------------------------------------------------------------------------------------------------------
+US_0018_TC_0018_User_should_be_able_to_create_Coupons_as_a_Vendor
+package project.tests;
+
+import org.testng.annotations.Test;
+import project.pages.PearlyMarketHomePage;
+import project.pages.RegisterSignInAndSignOutPage;
+import project.pages.vendorpages.PMV_CouponsPage;
+import project.pages.vendorpages.PMV_MyAccountPage;
+import project.pages.vendorpages.PMV_ProductsPage;
+import project.pages.vendorpages.PMV_StoreManagerPage;
+import project.utilities.TestBase;
+
+
+
+public class US_0018_TC_0018_User_should_be_able_to_create_Coupons_as_a_Vendor {
+
+
+    TestBase base = new TestBase();
+    PearlyMarketHomePage pearlyMarketHomePage = new PearlyMarketHomePage();
+    PMV_MyAccountPage myAccountPage = new PMV_MyAccountPage();
+    PMV_ProductsPage productsPage = new PMV_ProductsPage();
+    RegisterSignInAndSignOutPage registerSignInAndSignOutPage = new RegisterSignInAndSignOutPage();
+
+    PMV_StoreManagerPage storeManagerPage = new PMV_StoreManagerPage();
+
+    PMV_CouponsPage couponsPage = new PMV_CouponsPage();
+
+    @Test
+    public void Test_User_should_be_able_to_create_Coupons_as_a_Vendor() {
+        //1_Go to https://pearlymarket.com/
+        base.signInVendor();
+        //click on my account
+        pearlyMarketHomePage.clickMyAccount();
+        //click on My Account(but it is Sign Out Button)
+        registerSignInAndSignOutPage.signOut();
+        //click on Store Manager
+        myAccountPage.clickStoreManager();
+        //hover over Coupons
+        storeManagerPage.hoverOverCupons();
+        //click on Add New
+        couponsPage.clickCouponsAddNew();
+        //enter the code
+        couponsPage.addCouponCode();
+        //enter the description
+        productsPage.writeDescription("Have fun with the coupon");
+        //11_select fixed product discount
+        productsPage.selectCategories();
+        //12_enter the coupon amount
+        couponsPage.addDiscountAmount();
+        //13_enter the coupon expiration date
+        couponsPage.setCouponExpiryDate();
+        //validate the "allow free shipping" and "show on store" checkboxs are clickable
+        //click on submit button
+        couponsPage.clickSubmitNewCoupon();
+        //validate "Edit Coupon" is visible
+
+        //click on Coupons button again
+        storeManagerPage.clickCoupons();
+        ///validate coupon/s is/are visible
+
+
+
+
+    }
+}
+
+
+--------------------------------------------------------------------------------------------------
+US_0019_TC_0019_User_should_be_able_to_shop_as_a_Customer_with_the_created_Coupon
+
+package project.tests;
+
+import org.testng.annotations.Test;
+import project.pages.PearlyMarketHomePage;
+import project.pages.customerpages.PMC_CartPage;
+import project.pages.customerpages.PMC_CheckoutPage;
+import project.pages.customerpages.PMC_SearchPage;
+import project.pages.vendorpages.PMV_CouponsPage;
+import project.pages.vendorpages.PMV_StoreManagerPage;
+import project.utilities.TestBase;
+import project.utilities.WaitUtils;
+
+public class US_0019_TC_0019_User_should_be_able_to_shop_as_a_Customer_with_the_created_Coupon {
+
+
+
+    TestBase testBase = new TestBase();
+    PearlyMarketHomePage pearlyMarketHomePage = new PearlyMarketHomePage();
+    PMV_CouponsPage couponsPage = new PMV_CouponsPage();
+    PMC_CartPage cartPage = new PMC_CartPage();
+    PMC_CheckoutPage checkoutPage = new PMC_CheckoutPage();
+    PMV_StoreManagerPage storeManagerPage = new PMV_StoreManagerPage();
+
+
+    @Test
+    public void signIn_as_customer(){
+        //Go to https://pearlymarket.com/
+        testBase.goToTheUrl();
+        //you should click on Sign In button as a customer
+        //Enter the username/password
+        //click on sign in button
+        testBase.signInCustomer();
+        //click on My Account(but it is Sign Out Button)
+        pearlyMarketHomePage.clickMyAccount();
+        //click on Orders
+        checkoutPage.clickPlaceOrder();
+        //click on BROWSE PRODUCTS
+        //click on a product
+        storeManagerPage.clickProducts();
+        //click on ADD TO CART button
+        cartPage.clickAddButton();
+        //click on Cart button
+        cartPage.clickGoToCartButton();
+        //click on VIEW CART button
+        cartPage.clickViewCartButton();
+        //enter the coupon code
+        couponsPage.addCouponCode();
+        //click on APPLY COUPON button
+        couponsPage.clickApplyCoupon();
+        //click on "Enter coupon code here..." box
+        couponsPage.setYourCouponCode();
+        //validate the coupon is accepted
+
+    }
+}
